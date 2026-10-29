@@ -1,0 +1,76 @@
+<section class="grid" id="university-list">
+      <article class="card" data-name="علوم الحاسوب تقنية المعلومات" data-field="الحاسوب">
+        <span class="tag">تقنية المعلومات</span>
+        <h3>علوم الحاسوب</h3>
+        <p>تعرّف على الجامعات التي تقدم برامج علوم الحاسوب وتقنية المعلومات.</p>
+        <p class="muted">الرسوم وشروط القبول: تُضاف بعد التحقق من الجامعة.</p>
+      </article>
+      <article class="card" data-name="الهندسة" data-field="الهندسة">
+        <span class="tag">التخصصات الهندسية</span>
+        <h3>الهندسة</h3>
+        <p>استكشف برامج الهندسة وتخصصاتها المختلفة في الجامعات الهندية.</p>
+        <p class="muted">الرسوم وشروط القبول: تُضاف بعد التحقق من الجامعة.</p>
+      </article>
+      <article class="card" data-name="الطب العلوم الصحية" data-field="الطب">
+        <span class="tag">العلوم الصحية</span>
+        <h3>الطب والعلوم الصحية</h3>
+        <p>تعرّف على البرامج الطبية ومتطلبات القبول والاعتماد.</p>
+        <p class="muted">تحقق من شروط القبول والاعتراف قبل التسجيل.</p>
+      </article>
+      <article class="card" data-name="إدارة الأعمال" data-field="الإدارة">
+        <span class="tag">الإدارة</span>
+        <h3>إدارة الأعمال</h3>
+        <p>استكشف برامج الإدارة والأعمال والتخصصات المرتبطة بها.</p>
+        <p class="muted">الرسوم وشروط القبول: تُضاف بعد التحقق من الجامعة.</p>
+      </article>
+    </section>
+
+    <h2 class="section-title" id="services">خدمات رحلة</h2>
+    <section class="services">
+      <div class="grid">
+        <div>
+          <h3>🎓 الإرشاد الجامعي</h3>
+          <p>مساعدة الطلاب في استكشاف الجامعات والتخصصات المناسبة.</p>
+        </div>
+        <div>
+          <h3>📄 تجهيز الطلبات</h3>
+          <p>التعرّف على المستندات والخطوات المطلوبة للتقديم.</p>
+        </div>
+        <div>
+          <h3>💬 الاستفسارات</h3>
+          <p>تواصل مع المكتب للاستفسار عن الخدمات وإجراءات القبول.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">ابدأ رحلتك الدراسية</h2>
+      <div class="card">
+        <p>هل تحتاج إلى مساعدة في اختيار الجامعة أو معرفة شروط التقديم؟ تواصل معنا.</p>
+        <p class="muted">سيتم إضافة رقم واتساب الرسمي وبيانات المكتب هنا.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>رحلة للدراسة في الهند</strong></p>
+    <p>خطوتك الأولى نحو مستقبلك الدراسي</p>
+    <p>© Rihla For Study in India</p>
+  </footer>
+
+  <a class="whatsapp" href="#contact">تواصل معنا</a>
+
+  <script>
+    function filterUniversities() {
+      const query = document.getElementById('search').value.trim().toLowerCase();
+      const field = document.getElementById('field').value;
+      document.querySelectorAll('#university-list .card').forEach(card => {
+        const name = card.dataset.name.toLowerCase();
+        const matchesName = name.includes(query);
+        const matchesField = !field || card.dataset.field === field;
+        card.style.display = matchesName && matchesField ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
